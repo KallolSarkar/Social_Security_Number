@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+<link rel="stylesheet" href="styles.css">
+
+<title>SSN</title>
+</head>
+<body>
+<div>
+<div class="wrapper">
+	<div class="container" style="border:1px solid black; ">
+		<form autocomplete="off" name="form" action="signupP2.html">
+			<div>
+				<h4 class="sml_hd">Candidate Information</h4>
+				<div class="row">
+					<div class="col-md-3 myDesign" >
+						<label>Name
+							<span style="color:#F00;">*</span>
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="text" name="first_name" placeholder="First Name" class="form-control " value="">
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="text" name="mid_name" placeholder="Middle Name" class="form-control" value="">
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="text" name="last_name" placeholder="Last Name" class="form-control" value="">
+					</div>
+	
+				</div>
+				<div class="row">
+					<div class="col-md-3 myDesign">
+						<label>Father's Name
+							<span style="color:#F00;">*</span>
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="text" name="fathers_name" id="fathers_name" class="form-control" value="">
+					</div>
+					<div class="col-md-3 myDesign">
+						<label>Mother's Name
+							<span style="color:#F00;">*</span>
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="text" name="mothers_name" id="mothers_name" class="form-control" value="">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 myDesign">
+						<label>Gender
+							<span style="color:#F00;">*</span>
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<div class="radio">
+							<input id="m1" type="radio" name="gender" value="M">
+							<label for="m1">
+								<span>
+									<span></span>
+								</span>Male</label>
+							<input id="m2" type="radio" name="gender" value="F">
+							<label for="m2">
+								<span>
+									<span></span>
+								</span>Female</label>
+							<input id="m3" type="radio" name="gender" value="
+							0">
+							<label for="m3">
+								<span>
+									<span></span>
+								</span>Others</label>
+						</div>
+					</div>
+					<div class="col-md-3 myDesign">
+						<label>Religion
+							<span style="color:#F00;">*</span>
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<select name="religion" id="religion" class="form-control">
+							<option value="">Select</option>
+							<option value="6">Hindu</option>
+							<option value="6">Buddhist</option>
+							<option value="2">Christian</option>
+							<option value="3">Jain</option>
+							<option value="1">Muslim</option>
+							<option value="4">Parshi</option>
+							<option value="5">Sikh</option>
+						</select>
+					</div>
+				</div>
+	
+				<div class="row">
+					<div class="col-md-3 myDesign">
+						<label>Date of Birth
+							<span style="color:#F00;">*</span>
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="date" id="dob" name="dob" class="form-control" value="">
+					</div>
+					<div class="col-md-3 myDesign">
+						<label>Mobile No
+							<span style="color:#F00;">*</span>
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="text" id="mob" name="mob" class="form-control" value="">
+					</div>
+					<div class="col-md-3 myDesign">
+						<label>Password
+	
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="password" id="dob" name="password" class="form-control" value="">
+					</div>
+					<div class="col-md-3 myDesign">
+						<label>Confirm Password
+							<span style="color:#F00;">*</span>
+							<span class="dots">:</span>
+						</label>
+					</div>
+					<div class="col-md-3 myDesign">
+						<input type="Conf_password" id="dob" name="Conf_password" class="form-control" value="">
+					</div>
+				</div>
+	
+				<div align="center">
+					<input type="submit" name="submit" value="Submit" id="submit_button"  > 
+					<input type="reset" name="reset" value="Reset" id="reset_button">
+				</div>
+	
+				<a id="Mandatory_alert">Fields marked with
+					<span style="color:#F00;">*</span> is Mandatory</a>
+				<hr>
+	
+			</div>
+		</form>
+	</div>
+
+	
+</div>
+<footer>
+	<div class=" footer">
+		<a>Made with
+			<span class="love_emoji">&#10084; </span> By The Students Of Birbhum Institute Of Engineering and Technology</a>
+	</div>
+</footer>
+
+</body>
+
+</html>

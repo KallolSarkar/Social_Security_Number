@@ -1,0 +1,70 @@
+body {background-color: rgb(255, 255, 255);
+height: 100%;
+min-height: 100%;
+
+}
+h1  {color: blue;}
+p    {color: red;}
+
+
+#test{
+back: blue;
+
+}
+
+/*footer*/
+
+ .footer{
+     position: fixed;
+        width: 100%;
+        background: #333;
+        padding: 10px;
+        margin: 0 ;
+        color: #fff;
+        text-align: center;
+        clear: both;
+    }
+    .footer{
+        bottom: 0;
+        left: 0;
+    }    
+.love_emoji{
+    color: red;
+    
+}
+    
+.a1{
+background-color: green;
+}
+.container{
+    margin-top: 20px;
+    margin-bottom: 75px;
+}
+.myDesign{
+    margin: 5px 0px 5px 0px;
+}
+
+
+#submit_button{
+    margin: 50px 10px 0px 0px;
+    font-weight: bold;
+    background:#3789bf; 
+    border-radius: 0px 9px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #3789bf;
+    width: auto;
+    
+}
+#reset_button{
+    margin: 50px 0px 0px 10px;
+    background:#ffffff; 
+    border-radius: 0px 9px;
+    cursor: pointer;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid #3789bf;
+    width: auto;
+    
+}
