@@ -4,7 +4,7 @@ min-height: 100%;
 
 }
 h1  {color: blue;}
-p    {color: red;}
+
 
 
 #test{
@@ -76,6 +76,7 @@ background-color: green;
   position: inherit;
   top: 0; left: 0; bottom: 0; right: 0;
   height: 50%;
+  width: 100%;
   min-width: 200px;
   max-width: 420px;
   padding: 40px;
@@ -88,8 +89,6 @@ font-size: 26px;
 color: blue;
 font-weight: bold;
   margin-bottom: 10px;
-
-  
 }
 .myDesign2{
     margin: 15px 0px 15px 0px;
