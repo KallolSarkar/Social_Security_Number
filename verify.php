@@ -8,9 +8,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><title>SSN</title>
 <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<div>
+		<div>
 		<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #10aeed;">
 			<a class="navbar-brand" href="#">
 				<img src="logo.jpg" width="50" alt="Logo"> SSN
@@ -50,7 +49,6 @@
 	
 			</div>
 		</nav>
-	
 	</div>
 	<div id="test">
 		<div>
@@ -62,11 +60,10 @@
 	</div>
 	
 	<hr>
-	<div>
-		<button id="reset_button" onclick="window.location.href = 'signin.html'">Sign In</button>
-		<button id="submit_button" onclick="window.location.href = 'signup.html'">Sign Up</button>
+	<h3>Confirm Submission</h3>
+	<?php include 'verify1.php';?>
 	
-	</div>
+
 <!-- <footer>
 <div class=" footer">
 	<a>Made with
