@@ -63,6 +63,8 @@
 	<h3>Confirm Submission</h3>
 	<?php include 'verify1.php';?>
 	
+	<button id="submit_button" onclick="window.location.href = 'signup1.php'">Confirm</button>
+
 
 <!-- <footer>
 <div class=" footer">
