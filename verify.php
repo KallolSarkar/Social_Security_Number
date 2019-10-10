@@ -61,9 +61,30 @@
 	
 	<hr>
 	<h3>Confirm Submission</h3>
-	<?php include 'verify1.php';?>
+
+	<?php 
+		session_start();
+    	if(isset($_POST['submit_button'])) 
+    	{
+			//$_SESSION['User']=$_POST['first_name'];
+    	 	$first_name = $_POST['first_name'];
+    		$last_name =$_POST ['last_name'];
+			echo 'Full Name:  ';  
+
+			// intitializing array
+			if (!isset($_SESSION['temp_session'])) {
+				// Add items
+				  //$_SESSION['temp_session'] = array();
+				  $_SESSION['temp_session'] = array($first_name,$last_name,);
+		}
+		echo $_SESSION['temp_session'][0].' '.$_SESSION['temp_session'][1];
+
+
+		}	
 	
-	<button id="submit_button" onclick="window.location.href = 'signup1.php'">Confirm</button>
+	?>
+	
+	<button id="submit_button" name="confirm" onclick="window.location.href = 'submission.php'">Confirm</button>
 
 
 <!-- <footer>
