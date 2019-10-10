@@ -54,7 +54,7 @@
 	</nav>
 <div class="wrapper">
 	<div class="container" style="border:1px solid black; ">
-		<form autocomplete="off" name="form" method="POST" action="verify.php">
+		<form autocomplete="off" name="signupform" method="POST" action="verify.php">
 			<div>
 				<h4 class="sml_hd">Candidate Information</h4>
 				<div class="row">
@@ -189,7 +189,7 @@
 					</div>
 				</div>
 				<div align="center">
-					<input type="submit" name="submit" value="Submit" id="submit_button"  > 
+					<input type="submit" name="submit_button" value="Submit" id="submit_button"  > 
 					<input type="reset" name="reset" value="Reset" id="reset_button">
 				</div>
 	
@@ -203,6 +203,8 @@
 
 	
 </div>
+
+	
 <!-- <footer>
 	<div class=" footer">
 		<a>Made with
