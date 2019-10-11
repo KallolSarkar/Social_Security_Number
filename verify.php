@@ -74,7 +74,9 @@
 			$mother_name =$_POST ['mothers_name'];
 			$gender = $_POST["gender"];
 			$religion =$_POST ['religion'];
-			$dob =$_POST ['dob'];
+			$dobDay=$_POST ['dobDay'];
+			$dobMonth=$_POST ['dobMonth'];
+			$dobYear=$_POST ['dobYear'];
 			$mob =$_POST ['mob'];
 			$pass =$_POST ['password'];
 
@@ -86,7 +88,7 @@
 			if (!isset($_SESSION['temp_session'])) {
 				// Add items
 				  //$_SESSION['temp_session'] = array();
-				  $_SESSION['temp_session'] = array($first_name,$mid_name,$last_name,$father_name,$mother_name,$gender,$religion,$dob,$mob,$pass);
+				  $_SESSION['temp_session'] = array($first_name,$mid_name,$last_name,$father_name,$mother_name,$gender,$religion,$dobDay,$dobMonth,$dobYear,$mob,$pass);
 		}
 //		echo $_SESSION['temp_session'][0].' '.$_SESSION['temp_session'][1];
 		$len=count($_SESSION['temp_session']);
