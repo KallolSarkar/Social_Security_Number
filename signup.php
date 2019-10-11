@@ -12,6 +12,20 @@
 <title>SSN</title>
 </head>
 <body>
+<?php
+	//if(isset($_POST['back'])){
+			session_start();
+			if(isset($_SESSION['temp_session']))
+    		{
+				$first_name = $_SESSION['temp_session'][0];
+       			$last_name =$_SESSION['temp_session'][1];
+				session_destroy();				
+			}
+			
+		
+	//	}
+		
+?>
 <div>
 	<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #10aeed;">
 		<a class="navbar-brand" href="#">
@@ -65,7 +79,7 @@
 						</label>
 					</div>
 					<div class="col-md-3 myDesign">
-						<input type="text" name="first_name" placeholder="First Name" class="form-control " value="">
+						<input type="text" name="first_name" placeholder="First Name" class="form-control " value="<?php if (!empty($first_name)){echo $first_name;}?>">
 					</div>
 					<div class="col-md-3 myDesign">
 						<input type="text" name="mid_name" placeholder="Middle Name" class="form-control" value="">

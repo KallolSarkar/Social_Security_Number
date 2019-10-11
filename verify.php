@@ -66,7 +66,7 @@
 		session_start();
     	if(isset($_POST['submit_button'])) 
     	{
-			//$_SESSION['User']=$_POST['first_name'];
+			$_SESSION['User']=$_POST['first_name'];
     	 	$first_name = $_POST['first_name'];
     		$last_name =$_POST ['last_name'];
 			echo 'Full Name:  ';  
@@ -85,6 +85,7 @@
 	?>
 	
 	<button id="submit_button" name="confirm" onclick="window.location.href = 'submission.php'">Confirm</button>
+	<button id="reset_button" name="back" onclick="window.location.href = 'signup.php'">Back</button>
 
 
 <!-- <footer>
