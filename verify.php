@@ -67,19 +67,32 @@
     	if(isset($_POST['submit_button'])) 
     	{
 			$_SESSION['User']=$_POST['first_name'];
-    	 	$first_name = $_POST['first_name'];
-    		$last_name =$_POST ['last_name'];
+			$first_name = $_POST['first_name'];
+			$mid_name=$_POST['mid_name']; 
+			$last_name=$_POST['last_name']; 
+			$father_name =$_POST ['fathers_name'];
+			$mother_name =$_POST ['mothers_name'];
+			$gender = $_POST["gender"];
+			$religion =$_POST ['religion'];
+			$dob =$_POST ['dob'];
+			$mob =$_POST ['mob'];
+			$pass =$_POST ['password'];
+
+
+
 			echo 'Full Name:  ';  
 
 			// intitializing array
 			if (!isset($_SESSION['temp_session'])) {
 				// Add items
 				  //$_SESSION['temp_session'] = array();
-				  $_SESSION['temp_session'] = array($first_name,$last_name,);
+				  $_SESSION['temp_session'] = array($first_name,$mid_name,$last_name,$father_name,$mother_name,$gender,$religion,$dob,$mob,$pass);
 		}
-		echo $_SESSION['temp_session'][0].' '.$_SESSION['temp_session'][1];
-
-
+//		echo $_SESSION['temp_session'][0].' '.$_SESSION['temp_session'][1];
+		$len=count($_SESSION['temp_session']);
+		for($i=0;$i<$len;$i++){
+			echo $_SESSION['temp_session'][$i]."\n";
+		}
 		}	
 	
 	?>

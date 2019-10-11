@@ -18,7 +18,15 @@
 			if(isset($_SESSION['temp_session']))
     		{
 				$first_name = $_SESSION['temp_session'][0];
-       			$last_name =$_SESSION['temp_session'][1];
+				$mid_name = $_SESSION['temp_session'][1];
+				$last_name =$_SESSION['temp_session'][2];
+				$father_name = $_SESSION['temp_session'][3];
+				$mother_name = $_SESSION['temp_session'][4];
+				$gender = $_SESSION['temp_session'][5];
+				$religion =$_SESSION['temp_session'][6];
+				$dob =$_SESSION['temp_session'][7];
+				$mob =$_SESSION['temp_session'][8];
+
 				session_destroy();				
 			}
 			
@@ -82,10 +90,10 @@
 						<input type="text" name="first_name" placeholder="First Name" class="form-control " value="<?php if (!empty($first_name)){echo $first_name;}?>">
 					</div>
 					<div class="col-md-3 myDesign">
-						<input type="text" name="mid_name" placeholder="Middle Name" class="form-control" value="">
+						<input type="text" name="mid_name" placeholder="Middle Name" class="form-control" value="<?php if (!empty($mid_name)){echo $mid_name;}?>">
 					</div>
 					<div class="col-md-3 myDesign">
-						<input type="text" name="last_name" placeholder="Last Name" class="form-control" value="">
+						<input type="text" name="last_name" placeholder="Last Name" class="form-control" value="<?php if (!empty($last_name)){echo $last_name;}?>">
 					</div>	
 				</div>				
 				<div class="row">
@@ -96,7 +104,7 @@
 						</label>
 					</div>
 					<div class="col-md-9 myDesign">
-						<input type="text" name="fathers_name" id="fathers_name" class="form-control" value="">
+						<input type="text" name="fathers_name" id="fathers_name" class="form-control" value="<?php if (!empty($father_name)){echo $father_name;}?>">
 					</div>					
 				</div>
 				<div class="row">					
@@ -107,7 +115,7 @@
 						</label>
 					</div>
 					<div class="col-md-9 myDesign">
-						<input type="text" name="mothers_name" id="mothers_name" class="form-control" value="">
+						<input type="text" name="mothers_name" id="mothers_name" class="form-control" value="<?php if (!empty($mother_name)){echo $mother_name;}?>">
 					</div>
 					
 				</div>
@@ -120,18 +128,17 @@
 					</div>
 					<div class="col-md-9 myDesign">
 						<div class="radio">
-							<input id="m1" type="radio" name="gender" value="M">
+							<input id="m1" type="radio" name="gender"  value="Male"<?php if (!empty($gender)){echo ($gender=='Male')?'checked':'';} ?> checked>
 							<label for="m1">
 								<span>
 									<span></span>
 								</span>Male</label>
-							<input id="m2" type="radio" name="gender" value="F">
+							<input id="m2" type="radio" name="gender" value="Female"<?php if (!empty($gender)){echo ($gender=='Female')?'checked':'';} ?>>
 							<label for="m2">
 								<span>
 									<span></span>
 								</span>Female</label>
-							<input id="m3" type="radio" name="gender" value="
-							0">
+							<input id="m3" type="radio" name="gender" value="Others"<?php if (!empty($gender)){echo ($gender=='Others')?'checked':'';} ?>>
 							<label for="m3">
 								<span>
 									<span></span>
@@ -149,13 +156,13 @@
 					<div class="col-md-9 myDesign">
 						<select name="religion" id="religion" class="form-control">
 							<option value="">Select</option>
-							<option value="6">Hindu</option>
-							<option value="6">Buddhist</option>
-							<option value="2">Christian</option>
-							<option value="3">Jain</option>
-							<option value="1">Muslim</option>
-							<option value="4">Parshi</option>
-							<option value="5">Sikh</option>
+							<option value="Hindu"<?php if (!empty($religion)&& $religion == 'Hindu')  echo 'selected = "selected"';?>>Hindu</option>
+							<option value="Buddhist"<?php if (!empty($religion)&& $religion == 'Buddhist')  echo 'selected = "selected"';?>>Buddhist</option>
+							<option value="Christian"<?php if (!empty($religion)&& $religion == 'Christian')  echo 'selected = "selected"';?>>Christian</option>
+							<option value="Jain"<?php if (!empty($religion)&& $religion == 'Jain')  echo 'selected = "selected"';?>>Jain</option>
+							<option value="Muslim"<?php if (!empty($religion)&& $religion == 'Muslim')  echo 'selected = "selected"';?>>Muslim</option>
+							<option value="Parshi"<?php if (!empty($religion)&& $religion == 'Parshi')  echo 'selected = "selected"';?>>Parshi</option>
+							<option value="Sikh"<?php if (!empty($religion)&& $religion == 'Sikh')  echo 'selected = "selected"';?>>Sikh</option>
 						</select>
 					</div>
 				</div>
@@ -178,12 +185,13 @@
 						</label>
 					</div>
 					<div class="col-md-9 myDesign">
-						<input type="text" id="mob" name="mob" class="form-control" value="">
+						<input type="text" id="mob" name="mob" class="form-control" value="<?php if (!empty($mob)){echo $mob;}?>">
 					</div>					
 				</div>
 				<div class="row">
 					<div class="col-md-3 myDesign">
 						<label>Password
+							<span style="color:#F00;">*</span>
 							<span class="dots">:</span>
 						</label>
 					</div>
