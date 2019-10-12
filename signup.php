@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <link rel="stylesheet" href="styles.css">
+<script src="validationSignUp1.js"></script>
 
 <title>SSN</title>
 </head>
@@ -89,13 +90,14 @@
 						</label>
 					</div>
 					<div class="col-md-3 myDesign">
-						<input type="text" name="first_name" placeholder="First Name" class="form-control " value="<?php if (!empty($first_name)){echo $first_name;}?>" required>
+						<input type="text" id="fname" name="first_name" placeholder="First Name" class="form-control " value="<?php if (!empty($first_name)){echo $first_name;}?>" onkeyup=Uppercase('fname'); required>
+						
 					</div>
 					<div class="col-md-3 myDesign">
-						<input type="text" name="mid_name" placeholder="Middle Name" class="form-control" value="<?php if (!empty($mid_name)){echo $mid_name;}?>">
+						<input type="text" id="mid_name" name="mid_name" placeholder="Middle Name" class="form-control" value="<?php if (!empty($mid_name)){echo $mid_name;}?>" onkeyup=Uppercase('mid_name');>
 					</div>
 					<div class="col-md-3 myDesign">
-						<input type="text" name="last_name" placeholder="Last Name" class="form-control" value="<?php if (!empty($last_name)){echo $last_name;}?>" required>
+						<input type="text" id="last_name" name="last_name" placeholder="Last Name" class="form-control" value="<?php if (!empty($last_name)){echo $last_name;}?>"onkeyup=Uppercase('last_name'); required>
 					</div>	
 				</div>				
 				<div class="row">
@@ -106,7 +108,7 @@
 						</label>
 					</div>
 					<div class="col-md-9 myDesign">
-						<input type="text" name="fathers_name" id="fathers_name" class="form-control" value="<?php if (!empty($father_name)){echo $father_name;}?>"required>
+						<input type="text" name="fathers_name" id="fathers_name" class="form-control" value="<?php if (!empty($father_name)){echo $father_name;}?>"  onkeyup=Uppercase('fathers_name');>
 					</div>					
 				</div>
 				<div class="row">					
@@ -117,7 +119,7 @@
 						</label>
 					</div>
 					<div class="col-md-9 myDesign">
-						<input type="text" name="mothers_name" id="mothers_name" class="form-control" value="<?php if (!empty($mother_name)){echo $mother_name;}?>"required>
+						<input type="text" name="mothers_name" id="mothers_name" class="form-control" value="<?php if (!empty($mother_name)){echo $mother_name;}?>" onkeyup=Uppercase('mothers_name');>
 					</div>
 					
 				</div>
@@ -273,7 +275,7 @@
 						</label>
 					</div>
 					<div class="col-md-9 myDesign">
-						<input type="text" id="mob" name="mob" class="form-control" value="<?php if (!empty($mob)){echo $mob;}?>" required>
+						<input type="text" id="mob" name="mob" class="form-control" value="<?php if (!empty($mob)){echo $mob;}?>" >
 					</div>					
 				</div>
 				<div class="row">
@@ -284,7 +286,7 @@
 						</label>
 					</div>
 					<div class="col-md-9 myDesign">
-						<input type="password" id="dob" name="password" class="form-control" value="" required>
+						<input type="password" id="dob" name="password" class="form-control" value="">
 					</div>
 				</div>
 				<div class="row">
@@ -295,11 +297,11 @@
 						</label>
 					</div>
 					<div class="col-md-9 myDesign">
-						<input type="password" id="dob" name="Conf_password" class="form-control" value="" required>
+						<input type="password" id="dob" name="Conf_password" class="form-control" value="">
 					</div>
 				</div>
 				<div align="center">
-					<input type="submit" name="submit_button" value="Submit" id="submit_button"  > 
+					<input type="submit" name="submit_button" value="Submit" id="submit_button" onclick=validationSignUp1() > 
 					<input type="reset" name="reset" value="Reset" id="reset_button">
 				</div>
 	
@@ -314,6 +316,12 @@
 	
 </div>
 
+<script>
+	function Uppercase(name) {
+    	var x = document.getElementById(name);
+    	x.value = x.value.toUpperCase();
+	}
+</script>
 	
 <!-- <footer>
 	<div class=" footer">
