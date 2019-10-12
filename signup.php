@@ -28,7 +28,9 @@
 				$dobDay =$_SESSION['temp_session'][7];
 				$dobMonth =$_SESSION['temp_session'][8];
 				$dobYear =$_SESSION['temp_session'][9];
-				$mob =$_SESSION['temp_session'][10];
+				$mob_pre =$_SESSION['temp_session'][10];
+				$mob =$_SESSION['temp_session'][11];
+				
 
 				session_destroy();				
 			}
@@ -274,7 +276,12 @@
 							<span class="dots">:</span>
 						</label>
 					</div>
-					<div class="col-md-9 myDesign">
+					<div class="col-md-2 col-4 myDesign">
+						<select name="mob_pre" class="form-control">
+							<option value="+91"<?php if (!empty($mob_pre)&& $mob_pre == '+91')  echo 'selected = "selected"';?>>+91</option>		
+						</select>			
+					</div>
+					<div class="col-md-7 col-8 myDesign">
 						<input type="text" id="mob" name="mob" class="form-control" value="<?php if (!empty($mob)){echo $mob;}?>" >
 					</div>					
 				</div>
